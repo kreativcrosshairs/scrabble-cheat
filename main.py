@@ -51,9 +51,13 @@ def log_error(frame, message: str):
 
 def get_word_list(filename: str) -> List[str]:
     """
-    Read the file and return a list of words
-    :param filename: str -> A string representing the filename to be read
-    :return: List[str] -> A list of words read from the file
+    Constructs a word list.
+
+    Opens and reads the given filename.
+    Creates a list where each element is a word from the file.
+    Also strips the newlines off the words.
+    :param filename: str -> The file to be opened
+    :return: List[str] -> A lost containing all the words in the file.
     """
     try:
         with open(filename, 'r') as f:
